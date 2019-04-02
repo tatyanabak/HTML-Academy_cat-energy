@@ -1,8 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Татьяна Бак](https://up.htmlacademy.ru/adaptive/16/user/74274).
-* Наставник: `Неизвестно`.
-
+* Наставник: [Антон Попов](https://htmlacademy.ru/profile/joker).
 ---
 
 **Обратите внимание, что папка с вашими исходными файлами — `source/`.**
