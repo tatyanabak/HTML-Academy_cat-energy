@@ -16,7 +16,7 @@
     content: "";
 
     background-color: $color-accent;
-    background-image: url('../img/index-background-mobile@1x.jpg');
+    background-image: url("../img/index-background-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
@@ -33,7 +33,7 @@
 
     content: "";
 
-    background-image: url('../img/index-can-mobile@1x.png');
+    background-image: url("../img/index-can-mobile@1x.png");
     background-repeat: no-repeat;
     background-position: center;
   }

@@ -6,7 +6,7 @@
 
   border: none;
   background-color: inherit;
-  background-image: url('../img/icon-mobile-menu.svg');
+  background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 25px 19px;
@@ -31,7 +31,7 @@
   border-top: 1px solid #e7e7e7;
 
   &:last-child {
-    border-bottom: 1px solid #e7e7e7;;
+    border-bottom: 1px solid #e7e7e7;
   }
 }
 

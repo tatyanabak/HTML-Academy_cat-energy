@@ -32,7 +32,8 @@
 @mixin link-interaction ($basic) {
   color: $basic;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: rgba($basic, 0.6)
   }
 
@@ -42,7 +43,8 @@
 }
 
 @mixin main-logo-interaction {
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     opacity: 0.8;
   }
 
