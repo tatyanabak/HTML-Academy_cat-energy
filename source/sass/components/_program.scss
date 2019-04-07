@@ -1,0 +1,52 @@
+.program {
+  position: relative;
+  top: -20px;
+}
+
+.program__item {
+  margin-top: 20px;
+  padding-top: 32px;
+
+  background-color: $color-neutral;
+}
+
+.program__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+
+  font-family: $font-accent;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 37px;
+}
+
+.program__description {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 21px;
+
+  color: $color-text;
+}
+
+.program__button {
+  @include button-general;
+
+  padding-top: 20px;
+  padding-bottom: 22px;
+
+  text-align: left;
+
+  color: $color-basic;
+  border-top: 1px solid #dadada;
+  background-color: $color-neutral;
+
+  font-size: 16px;
+  line-height: 16px;
+
+  &:active {
+    color: rgba($color-basic, 0.3);
+  }
+}

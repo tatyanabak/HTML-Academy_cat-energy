@@ -1,0 +1,50 @@
+.main-nav__toggle {
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  border: none;
+  background-color: inherit;
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 19px;
+
+  font-size: 0;
+}
+
+.main-nav__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.main-nav__item {
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  list-style: none;
+
+  text-align: center;
+
+  border-top: 1px solid #e7e7e7;
+
+  &:last-child {
+    border-bottom: 1px solid #e7e7e7;
+  }
+}
+
+.main-nav__link {
+  text-decoration: none;
+  text-transform: uppercase;
+
+  font-family: $font-accent;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.main-nav__link[href] {
+  @include link-interaction($color-basic);
+}
