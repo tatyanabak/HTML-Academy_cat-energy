@@ -1,0 +1,28 @@
+.promo__title {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  text-align: center;
+
+  color: $color-accent-contrast;
+  background-color: $color-accent;
+
+  font-family: $font-accent;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  }
+
+.promo__text {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $color-accent-contrast;
+  background-color: $color-accent;
+
+  font-family: $font-accent;
+  line-height: 14px;
+}

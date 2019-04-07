@@ -1,0 +1,39 @@
+.program__title {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  font-family: $font-accent;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 37px;
+}
+
+.program__description {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: $color-text;
+}
+
+.program__button {
+  @include button-general;
+
+  padding-top: 20px;
+  padding-bottom: 22px;
+
+  text-align: left;
+
+  color: $color-basic;
+  border-top: 1px solid #dadada;
+  background-color: $color-neutral;
+
+  font-size: 16px;
+  line-height: 16px;
+
+  &:active {
+    color: rgba($color-basic, 0.3);
+  }
+}

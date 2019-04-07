@@ -1,0 +1,39 @@
+@mixin button-general {
+  display: block; /*уберу, если появятся флексбоксы */
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: $font-accent;
+  cursor: pointer;
+  border: none;
+}
+
+@mixin button-interaction ($bgc-bacis, $color-basic, $bgc-interacting) {
+  background-color: $bgc-bacis;
+  color: $color-basic;
+
+  &:hover {
+    background-color: $bgc-interacting;
+  }
+
+  &:focus {
+    background-color: $bgc-interacting;
+  }
+
+  &:active {
+    background-color: $bgc-interacting;
+    color: rgba($color-basic, 0.3);
+  }
+}
+
+@mixin link-interaction ($basic) {
+  color: $basic;
+
+  &:hover, &:focus {
+    color: rgba($basic, 0.6)
+  }
+
+  &:active {
+    color: rgba($basic, 0.3);
+  }
+}

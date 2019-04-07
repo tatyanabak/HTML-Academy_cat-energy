@@ -1,0 +1,22 @@
+@import 'abstracts/variables.scss';
+@import 'abstracts/mixins.scss';
+@import 'abstracts/visually-hidden.scss';
+
+@import 'base/typography.scss';
+@import 'base/global.scss';
+
+@import 'layout/main-nav';
+
+@import 'components/button.scss';
+@import 'components/promo__button.scss';
+@import 'components/more-product__button.scss';
+@import 'components/promo.scss';
+@import 'components/program.scss';
+@import 'components/basic-points.scss';
+@import 'components/title.scss';
+@import 'components/products.scss';
+@import 'components/more-products.scss';
+
+body {
+  //background-color: yellow;
+}
