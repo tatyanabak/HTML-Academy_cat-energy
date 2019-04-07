@@ -1,5 +1,7 @@
-.page-header__link-logo {
+.page-header__link-logo[href] {
   cursor: pointer;
+
+  @include main-logo-interaction;
 }
 
 .page-header__logo {

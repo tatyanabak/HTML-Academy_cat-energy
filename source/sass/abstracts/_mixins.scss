@@ -40,3 +40,13 @@
     color: rgba($basic, 0.3);
   }
 }
+
+@mixin main-logo-interaction {
+  &:hover, &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

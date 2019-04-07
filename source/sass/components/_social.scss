@@ -24,7 +24,23 @@
 
   cursor: pointer;
 
-  outline: 1px solid orange;
+  background-repeat: no-repeat;
+  background-position: center;
 
   font-size: 0;
+
+  &--vk {
+    background-image: url('../img/icon-vk.svg');
+    background-size: 22px 12px;
+  }
+
+  &--instagram {
+    background-image: url('../img/icon-insta.svg');
+    background-size: 23px 23px;
+  }
+
+  &--facebook {
+    background-image: url('../img/icon-fb.svg');
+    background-size: 10px 19px;
+  }
 }

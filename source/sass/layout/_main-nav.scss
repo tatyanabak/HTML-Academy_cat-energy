@@ -5,8 +5,11 @@
   cursor: pointer;
 
   border: none;
-  outline: 1px solid orange;
   background-color: inherit;
+  background-image: url('../img/icon-mobile-menu.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px 19px;
 
   font-size: 0;
 }
@@ -40,6 +43,8 @@
   font-size: 20px;
   font-weight: 500;
   line-height: 20px;
+}
 
+.main-nav__link[href] {
   @include link-interaction($color-basic);
 }
