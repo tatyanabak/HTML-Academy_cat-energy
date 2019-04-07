@@ -1,16 +1,19 @@
 @mixin button-general {
   display: block; /*уберу, если появятся флексбоксы */
-  text-align: center;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-family: $font-accent;
+
   cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
   border: none;
+
+  font-family: $font-accent;
 }
 
 @mixin button-interaction ($bgc-bacis, $color-basic, $bgc-interacting) {
-  background-color: $bgc-bacis;
   color: $color-basic;
+  background-color: $bgc-bacis;
 
   &:hover {
     background-color: $bgc-interacting;
@@ -21,8 +24,8 @@
   }
 
   &:active {
-    background-color: $bgc-interacting;
     color: rgba($color-basic, 0.3);
+    background-color: $bgc-interacting;
   }
 }
 

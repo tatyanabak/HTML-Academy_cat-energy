@@ -5,7 +5,9 @@
 @import 'base/typography.scss';
 @import 'base/global.scss';
 
-@import 'layout/main-nav';
+@import 'layout/page-header.scss';
+@import 'layout/main-nav.scss';
+@import 'layout/page-footer.scss';
 
 @import 'components/button.scss';
 @import 'components/promo__button.scss';
@@ -15,6 +17,8 @@
 @import 'components/title.scss';
 @import 'components/products.scss';
 @import 'components/more-products.scss';
+@import 'components/social.scss';
+@import 'components/copyright.scss';
 
 body {
   //background-color: yellow;

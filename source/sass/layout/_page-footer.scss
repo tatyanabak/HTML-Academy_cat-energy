@@ -1,0 +1,41 @@
+.page-footer {
+  background-color: $color-neutral;
+}
+
+.page-footer__address {
+  &--other-color {
+    background-color: $color-accent-contrast;
+  }
+}
+
+.page-footer__contacts {
+  text-align: center;
+}
+
+.page-footer__link-logo {
+  display: block;
+
+  padding-top: 39px;
+  padding-bottom: 31px;
+
+  cursor: pointer;
+  text-align: center;
+}
+
+.page-footer__social {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0;
+
+  border-top: 1px solid #dadada;
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 22px;
+  padding-bottom: 22px;
+
+  border-top: 1px solid #dadada;
+}

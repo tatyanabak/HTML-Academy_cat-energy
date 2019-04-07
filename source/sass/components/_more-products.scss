@@ -15,7 +15,7 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
-  }
+}
 
 .more-products__text {
   margin-top: 9px;
@@ -24,17 +24,19 @@
 
   text-align: center;
 
+  color: $color-text;
+
   font-style: 12px;
   line-height: 16px;
 }
 
 .more-product__button {
-  @include button-general;
-  @include button-interaction($color-neutral, $color-text, $color-neutral-interacting);
-
   padding-top: 13px;
   padding-bottom: 12px;
 
   font-size: 16px;
   line-height: 20px;
+
+  @include button-general;
+  @include button-interaction($color-neutral, $color-text, $color-neutral-interacting);
 }

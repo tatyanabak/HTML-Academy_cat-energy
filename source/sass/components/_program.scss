@@ -4,16 +4,16 @@
 }
 
 .program__item {
-  background-color: $color-neutral;
   margin-top: 20px;
   padding-top: 32px;
+
+  background-color: $color-neutral;
 }
 
 .program__title {
   margin-top: 0;
   margin-bottom: 0;
   padding-bottom: 30px;
-
   text-align: center;
   text-transform: uppercase;
 

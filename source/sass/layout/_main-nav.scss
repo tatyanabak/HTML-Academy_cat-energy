@@ -1,8 +1,21 @@
+.main-nav__toggle {
+  width: 40px;
+  height: 40px;
+
+  cursor: pointer;
+
+  border: none;
+  outline: 1px solid orange;
+  background-color: inherit;
+
+  font-size: 0;
+}
+
 .main-nav__list {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 0;
-  }
+}
 
 .main-nav__item {
   padding-top: 24px;
@@ -22,9 +35,11 @@
 .main-nav__link {
   text-decoration: none;
   text-transform: uppercase;
+
   font-family: $font-accent;
-  font-size: 20px;font-weight: 500;
+  font-size: 20px;
+  font-weight: 500;
   line-height: 20px;
 
   @include link-interaction($color-basic);
-  }
+}

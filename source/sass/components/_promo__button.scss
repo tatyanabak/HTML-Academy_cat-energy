@@ -1,10 +1,10 @@
 .promo__button {
-  @include button-general;
-  @include button-interaction($color-accent, $color-accent-contrast, $color-accent-interacting);
-
   padding-top: 14px;
   padding-bottom: 11px;
 
   font-size: 14px;
   line-height: 18px;
+
+  @include button-general;
+  @include button-interaction($color-accent, $color-accent-contrast, $color-accent-interacting);
 }
