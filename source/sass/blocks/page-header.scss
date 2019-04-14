@@ -1,3 +1,11 @@
+.page-header {
+  border-bottom: 1px solid $border-basic;
+}
+
+.page-header__logo {
+  margin-left: $indent;
+}
+
 .page-header__link-logo[href] {
   cursor: pointer;
 
@@ -5,6 +13,6 @@
 }
 
 .page-header__logo {
-  padding-top: 11px;
+  padding-top: 10px;
   padding-bottom: 15px;
 }

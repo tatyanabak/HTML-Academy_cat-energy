@@ -1,0 +1,105 @@
+@mixin button-general($bgc-bacis, $color-basic, $bgc-interacting) {
+  display: block;
+
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: $color-basic;
+  border: none;
+  background-color: $bgc-bacis;
+
+  font-family: $font-accent;
+
+  &:hover {
+    background-color: $bgc-interacting;
+  }
+
+  &:focus {
+    background-color: $bgc-interacting;
+  }
+
+  &:active {
+    color: rgba($color-basic, 0.3);
+    background-color: $bgc-interacting;
+  }
+}
+
+@mixin link-interaction ($basic) {
+  color: $basic;
+
+  &:hover,
+  &:focus {
+    color: rgba($basic, 0.6);
+  }
+
+  &:active {
+    color: rgba($basic, 0.3);
+  }
+}
+
+@mixin main-logo-interaction {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@mixin max-width-320{
+  //width: 280px; /* делаю вёрстку резиновой */
+  width: 87.5%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin hide-list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  list-style: none;
+}
+
+@mixin form-label {
+  flex-shrink: 0;
+
+  text-transform: uppercase;
+
+  color: $color-basic-additional;
+
+  font-family: $font-accent;
+  font-size: 16px;
+  line-height: 1.125em;
+}
+
+@mixin form-input {
+  flex-grow: 1;
+
+  box-sizing: border-box;
+  min-width: 100px;
+  padding: 15px;
+
+  text-transform: uppercase;
+
+  color: $color-text;
+  border: 1px solid $border-basic;
+
+  font-family: $font-accent;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 1.125em;
+
+  &:focus,
+  &:active {
+    outline: 2px solid $color-text;
+  }
+
+  &:invalid {
+    outline: 2px solid $color-error;
+  }
+}

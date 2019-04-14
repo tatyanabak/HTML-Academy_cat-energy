@@ -1,0 +1,53 @@
+.more-products {
+  position: relative;
+
+  padding-top: 85px;
+  padding-bottom: 25px;
+
+  &::after {
+    position: absolute;
+    top: 25px;
+
+    display: block;
+
+    width: 30px;
+    height: 30px;
+
+    content: "";
+
+    background-image: url("../img/icon-plus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.more-products__title {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $color-basic;
+
+  font-family: $font-accent;
+  font-size: 16px;
+  font-weight: 500;
+
+  @include max-width-320;
+}
+
+.more-products__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+
+  text-align: center;
+
+  color: $color-text;
+
+  font-style: 12px;
+
+  @include max-width-320;
+}

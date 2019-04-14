@@ -9,7 +9,11 @@
 }
 
 .page-footer__contacts {
+  width: 100%;
+
   text-align: center;
+
+  @include max-width-320;
 }
 
 .page-footer__link-logo {
@@ -22,8 +26,9 @@
 }
 
 .page-footer__link-logo[href] {
-  @include main-logo-interaction;
   cursor: pointer;
+
+  @include main-logo-interaction;
 }
 
 .page-footer__social {
@@ -36,8 +41,8 @@
 
 .page-footer__copyright {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 
   padding-top: 22px;
   padding-bottom: 22px;
