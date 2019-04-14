@@ -1,0 +1,31 @@
+.address {
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 30px;
+  padding-bottom: 25px;
+
+  @include max-width-320;
+}
+
+.address__call {
+  width: 44.3%;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  text-transform: uppercase;
+
+  font-family: $font-accent;
+  font-size: 16px;
+  line-height: 1.25em;
+}
+
+.address__wrapper {
+  width: 50%;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  color: $color-text;
+
+  line-height: 1.43;
+}

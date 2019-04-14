@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -26,7 +27,7 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="title">Подбор программы</h1>
+      <h1 class="title title--with-indent">Подбор программы</h1>
       <p class="page-main__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="form__fieldset form__fieldset--pet">
@@ -43,23 +44,23 @@
             <label class="form__label" for="age">Возраст (лет):</label>
             <input class="form__text" type="text" name="age" id="age" placeholder="7">
           </div>
-          <div class="form__choosing-prorgam">
-            <div class="form__item">
-              <input class="form__radiobutton" type="radio" name="program" id="slim" checked>
-              <label class="form__radiobutton-label" for="slim">Похудение</label>
-            </div>
-            <div class="form__item">
-              <input class="form__radiobutton" type="radio" name="program" id="pro">
-              <label class="form__radiobutton-label" for="pro">Набор массы</label>
-            </div>
-            <div class="form__item">
-              <input class="form__radiobutton" type="radio" name="program" id="advice">
-              <label class="form__radiobutton-label" for="advice">Не знаю (нужен ваш совет)</label>
-            </div>
+        </fieldset>
+        <fieldset class="form__fieldset form__fieldset--program">
+          <div class="form__item">
+            <input class="form__radiobutton visually-hidden" type="radio" name="program" id="slim" checked>
+            <label class="form__radiobutton-label" for="slim">Похудение</label>
+          </div>
+          <div class="form__item">
+            <input class="form__radiobutton visually-hidden" type="radio" name="program" id="pro">
+            <label class="form__radiobutton-label" for="pro">Набор массы</label>
+          </div>
+          <div class="form__item">
+            <input class="form__radiobutton visually-hidden" type="radio" name="program" id="advice">
+            <label class="form__radiobutton-label" for="advice">Не знаю (нужен ваш совет)</label>
           </div>
         </fieldset>
         <fieldset class="form__fieldset">
-          <legend class="subtitle">Контактные данные (владельца кота)</legend>
+          <legend class="form__legend">Контактные данные (владельца кота)</legend>
           <div class="form__item">
             <label class="form__label" for="email">E-mail:<sup>*</sup></label>
             <input class="form__text form__text--email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
@@ -70,32 +71,32 @@
           </div>
         </fieldset>
         <fieldset class="form__fieldset">
-          <legend class="title">Комментарий</legend>
+          <legend class="form__legend">Комментарий</legend>
           <div class="form__item">
             <textarea class="form__textarea" name="comment" cols="20" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
         </fieldset>
         <fieldset class="form__fieldset">
-          <legend class="title">Дополнительно</legend>
+          <legend class="form__legend">Дополнительно</legend>
           <div class="form__item">
-            <input class="form__checkbox" type="checkbox" name="false-sugar" id="false-sugar" checked>
+            <input class="form__checkbox visually-hidden" type="checkbox" name="false-sugar" id="false-sugar" checked>
             <label class="form__checkbox-label" for="false-sugar">Сахарозаменитель</label>
           </div>
           <div class="form__item">
-            <input class="form__checkbox" type="checkbox" name="water" id="water">
+            <input class="form__checkbox visually-hidden" type="checkbox" name="water" id="water">
             <label class="form__checkbox-label" for="water">Питьевая вода</label>
           </div>
           <div class="form__item">
-            <input class="form__checkbox" type="checkbox" name="milk" id="milk">
+            <input class="form__checkbox visually-hidden" type="checkbox" name="milk" id="milk">
             <label class="form__checkbox-label" for="milk">Молоко</label>
           </div>
           <div class="form__item">
-            <input class="form__checkbox" type="checkbox" name="vitamins" id="vitamins">
+            <input class="form__checkbox visually-hidden" type="checkbox" name="vitamins" id="vitamins">
             <label class="form__checkbox-label" for="vitamins">Витамины</label>
           </div>
         </fieldset>
         <button class="button" type="submit">Отправить заявку</button>
-        <p class="form__text"><sup>*</sup> — Обязательные поля</p>
+        <p class="form__note"><sup>*</sup> — Обязательные поля</p>
       </form>
     </main>
     <footer class="page-footer">
@@ -107,11 +108,11 @@
             <span class="address__item">Санкт-Петербург</span>
           </p>
         </div>
-        <iframe class="page-footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538978928579" width="320" height="400" style="border:0" allowfullscreen></iframe>
+        <iframe class="page-footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1538978928579" width="100%" height="400" style="border:0" allowfullscreen></iframe>
       </div>
       <div class="page-footer__contacts">
         <a class="page-footer__link-logo" href="index.html">
-          <img class="page-footer__logo" src="../img/logo-footer.svg" width="128" height="24" alt="логотип Cat Energy">
+          <img class="page-footer__logo" src="img/logo-footer.svg" width="128" height="24" alt="логотип Cat Energy">
         </a>
         <ul class="page-footer__social social">
           <li class="social__item">
@@ -127,7 +128,7 @@
         <div class="page-footer__copyright copyright">
           <a class="copyright__link-author" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           <a class="copyright__link-logo" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__logo" src="../img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+            <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
           </a>
         </div>
       </div>
