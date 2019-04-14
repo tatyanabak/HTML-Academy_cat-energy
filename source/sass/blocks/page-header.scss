@@ -4,15 +4,12 @@
 
 .page-header__logo {
   margin-left: $indent;
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
 
 .page-header__link-logo[href] {
   cursor: pointer;
 
   @include main-logo-interaction;
-}
-
-.page-header__logo {
-  padding-top: 10px;
-  padding-bottom: 15px;
 }

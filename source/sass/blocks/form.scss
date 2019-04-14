@@ -90,16 +90,16 @@
 }
 
 .form__radiobutton:checked + .form__radiobutton-label::after {
-    position: absolute;
-    left: 11px;
+  position: absolute;
+  left: 11px;
 
-    width: 9px;
-    height: 9px;
+  width: 9px;
+  height: 9px;
 
   content: "";
 
-    border-radius: 50%;
-    background-color: $color-accent;
+  border-radius: 50%;
+  background-color: $color-accent;
 }
 
 .form__checkbox-label {

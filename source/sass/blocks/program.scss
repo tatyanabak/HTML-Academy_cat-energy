@@ -95,15 +95,15 @@
   font-size: 16px;
   line-height: 1em;
 
-&::after {
-  display: inline-block;
+  &::after {
+    display: inline-block;
 
-  width: 25px;
-  height: 12px;
-  margin-left: 12px;
+    width: 25px;
+    height: 12px;
+    margin-left: 12px;
 
-  content: "";
+    content: "";
 
-  background-image: url('../img/icon-right-arrow-long.svg');
-}
+    background-image: url("../img/icon-right-arrow-long.svg");
   }
+}
