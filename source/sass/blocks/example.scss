@@ -1,0 +1,73 @@
+.example {
+  border-top: 1px solid $color-neutral; /* чтобы не выпадал наружу margin у title */
+  background-color: $color-neutral;
+}
+
+.example__wrapper {
+  @include max-width-320;
+}
+
+.example__text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.example__data {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  margin-top: 25px;
+}
+
+.example dl {
+  width: 44.3%;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  text-align: center;
+}
+
+.example dt {
+  padding-top: 17px;
+  padding-bottom: 18px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  border: 1px solid $border-additional;
+
+  font-family: $font-accent;
+  font-size: 24px;
+  line-height: 1em;
+}
+
+.example dd {
+  display: block;
+
+  box-sizing: border-box;
+  width: 70%;
+  margin-top: -10px;
+  margin-right: auto;
+  margin-left: auto;
+
+  text-align: center;
+
+  color: $color-text;
+  background-color: $color-neutral;
+
+  font-size: 12px;
+  line-height: 1em;
+}
+
+.example__cost {
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 44px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  font-family: $font-accent;
+  line-height: 1.43em;
+}

@@ -1,0 +1,16 @@
+.other-products__list {
+  @include hide-list;
+}
+
+.other-products__item {
+  padding-top: 15px;
+  padding-bottom: 20px;
+
+  border-bottom: 1px solid $border-additional;
+
+  @include max-width-320;
+
+  &:first-child {
+    border-top: 1px solid $border-additional;
+  }
+}

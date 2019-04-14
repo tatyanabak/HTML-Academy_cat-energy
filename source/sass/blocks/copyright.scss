@@ -1,9 +1,11 @@
 .copyright__link-author {
   cursor: pointer;
-  font-size: 16px;
-  line-height: 16px;
-  color: $color-text;
   text-decoration: none;
+
+  color: $color-text;
+
+  font-size: 16px;
+  line-height: 1em;
 
   &:active {
     color: rgba($color-text, 0.3);

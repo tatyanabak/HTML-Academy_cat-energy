@@ -1,0 +1,15 @@
+.products__list {
+  @include hide-list;
+}
+
+.products__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  border-top: 1px solid $border-product;
+
+  &:last-child {
+    border-bottom: 1px solid $border-product;
+  }
+}
