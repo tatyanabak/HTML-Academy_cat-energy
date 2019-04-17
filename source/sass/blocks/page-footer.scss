@@ -1,4 +1,7 @@
 .page-footer {
+  margin: 0;
+  padding: 0;
+
   background-color: $color-neutral;
 }
 
@@ -6,6 +9,10 @@
   &--other-color {
     background-color: $color-accent-contrast;
   }
+}
+
+.page-footer__map {
+
 }
 
 .page-footer__contacts {

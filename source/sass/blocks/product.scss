@@ -17,7 +17,7 @@
 .product__link-title {
   display: block;
 
-  width: 55%;
+  padding-bottom: 16px;
 
   text-decoration: none;
 }
@@ -25,8 +25,17 @@
 .product__title {
   margin-top: 0;
   margin-bottom: 0;
-  padding-bottom: 16px;
 
+  text-transform: uppercase;
+
+  color: $color-basic;
+
+  font-family: $font-accent;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.product__marking {
   text-transform: uppercase;
 
   color: $color-basic;

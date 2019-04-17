@@ -11,8 +11,8 @@
       <a class="page-header__link-logo" href="index.html">
         <img class="page-header__logo" src="img/logo-mobile.svg" width="191" height="39" alt="логотип Cat Energy">
       </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle main-nav__toggle--closed" type="button">Открыть меню</button>
+      <nav class="main-nav main-nav--opened">
+        <button class="main-nav__toggle" type="button">Открыть меню</button>
         <ul class="main-nav__list">
           <li class="main-nav__item">
             <a class="main-nav__link" href="index.html">Главная</a>
@@ -70,12 +70,12 @@
             <input class="form__text form__text--tel" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90">
           </div>
         </fieldset>
-        <fieldset class="form__fieldset">
-          <legend class="form__legend">Комментарий</legend>
+        <div class="form__comment">
+          <label class="form__comment-label" for="comment">Комментарий</label>
           <div class="form__item">
-            <textarea class="form__textarea" name="comment" cols="20" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="form__textarea" id="comment" name="comment" cols="20" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
           </div>
-        </fieldset>
+        </div>
         <fieldset class="form__fieldset">
           <legend class="form__legend">Дополнительно</legend>
           <div class="form__item">

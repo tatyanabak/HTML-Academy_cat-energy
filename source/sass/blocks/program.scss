@@ -1,5 +1,5 @@
 .program {
-  margin-top: -20px;
+  margin-bottom: -20px;
 
   @include max-width-320;
 }
@@ -7,7 +7,8 @@
 .program__item {
   position: relative;
 
-  margin-top: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
   padding-top: 30px;
   padding-right: $indent;
   padding-left: $indent;
@@ -83,8 +84,6 @@
 }
 
 .program__button {
-  @include button-general($color-transparent, $color-text, $color-transparent);
-
   padding-top: 20px;
   padding-bottom: 22px;
 
@@ -94,6 +93,8 @@
 
   font-size: 16px;
   line-height: 1em;
+
+  @include button-general($color-transparent, $color-text, $color-transparent);
 
   &::after {
     display: inline-block;
