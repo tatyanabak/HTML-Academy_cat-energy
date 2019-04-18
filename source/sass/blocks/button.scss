@@ -1,6 +1,4 @@
 .button {
-  display: block;
-
   box-sizing: border-box;
   padding-top: 15px;
   padding-right: 10px;
@@ -10,7 +8,6 @@
   font-size: 16px;
 
   @include button-general($color-accent, $color-accent-contrast, $color-accent-interacting);
-  @include max-width-320;
 
   &--promo {
     padding-top: 15px;
@@ -25,5 +22,36 @@
 
   &--other-product {
     width: 100%;
+  }
+}
+
+@media (max-width: 760px) {
+  .button {
+    @include max-width-320;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    &--promo {
+      display: inline-block;
+
+      margin-left: 15.6%;
+      padding-top: 17px;
+      padding-right: 30px;
+      padding-bottom: 15px;
+      padding-left: 30px;
+
+      font-size: 20px;
+      line-height: 1em;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button {
+    &--promo {
+      margin-left: 13.5%;
+    }
   }
 }
