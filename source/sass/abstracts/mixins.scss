@@ -57,10 +57,16 @@
   margin-left: auto;
 }
 
-@mixin max-width-768 {
+@mixin min-width-768 {
   width: 92.2%;
-  margin-right: 3.9%;
-  margin-left: 3.9%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin min-width-1400 {
+  width: 87.1%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 @mixin hide-list {
