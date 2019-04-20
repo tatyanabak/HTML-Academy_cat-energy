@@ -11,3 +11,20 @@
     margin-left: $indent;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .title {
+    margin-top: 50px;
+    margin-bottom: 60px;
+
+    font-size: 60px;
+    line-height: 1em;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title {
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+}
