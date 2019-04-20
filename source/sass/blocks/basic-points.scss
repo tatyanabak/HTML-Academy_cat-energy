@@ -51,3 +51,83 @@
     background-image: url("../img/advantage-clock@1x.png");
   }
 }
+
+@media (min-width: $tablet-width) {
+  .basic-points {
+    padding-bottom: 55px;
+
+    @include min-width-768;
+  }
+
+  .basic-points__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-top: 65px;
+    margin-bottom: -90px;
+
+    counter-reset: number;
+  }
+
+  .basic-points__item {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    width: 45.7%;
+    margin-bottom: 90px;
+    padding-right: 10.5%;
+    padding-bottom: 50px;
+
+    font-size: 16px;
+    line-height: 1.5em;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 35px;
+    }
+
+    &::after {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 32%;
+
+      display: block;
+
+      height: 100%;
+
+      content: counter(number);
+      counter-increment: number;
+
+      color: $color-neutral;
+
+      font-family: $font-accent;
+      font-size: 295px;
+      line-height: 0.71em;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .basic-points {
+    padding-bottom: 25px;
+
+    @include min-width-1400;
+  }
+
+  .basic-points__item {
+    width: 20%;
+    padding-right: 0;
+
+    &::after {
+      right: 0;
+      left: auto;
+    }
+  }
+}
