@@ -15,7 +15,7 @@
 
     content: "";
 
-    background-image: url("../img/icon-plus.svg");
+    background-image: url("../img/icon-plus-mobile.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -33,7 +33,7 @@
 
   font-family: $font-accent;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
 
   @include max-width-320;
 }
@@ -50,4 +50,59 @@
   font-style: 12px;
 
   @include max-width-320;
+}
+
+@media (min-width: $tablet-width) {
+  .more-products {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    box-sizing: border-box;
+    width: 324px;
+
+    border: 1px solid $border-basic;
+
+    &::after {
+      top: 120px;
+
+      width: 60px;
+      height: 60px;
+
+      background-image: url("../img/icon-plus.svg");
+    }
+  }
+
+  .more-products__title {
+    width: 56%;
+    margin-bottom: 30px;
+    padding-bottom: 0;
+
+    font-size: 20px;
+    line-height: 1em;
+  }
+
+  .more-products__text {
+    width: 90%;
+    margin-bottom: 85px;
+    padding-bottom: 0;
+
+    font-size: 16px;
+    line-height: 1em;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .more-products {
+    width: 245px;
+  }
+
+  .more-products__title {
+    width: 82%;
+  }
+
+  .more-products__text {
+    width: 170px;
+  }
 }
