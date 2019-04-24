@@ -36,3 +36,37 @@
 
   text-align: right;
 }
+
+@media (min-width: $tablet-width) {
+  .other-product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+
+  .other-product__title {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    font-size: 20px;
+  }
+
+  .other-product__data {
+    width: 36.5%;
+    font-size: 16px;
+    line-height: 1.25em;
+  }
+
+  .other-product__data dt {
+    width: 60%;
+  }
+
+  .other-product__data dd {
+    width: 40%;
+  }
+}

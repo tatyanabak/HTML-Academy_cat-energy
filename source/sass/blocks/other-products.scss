@@ -14,3 +14,11 @@
     border-top: 1px solid $border-additional;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .other-products__item {
+    @include min-width-768;
+    border-left: 1px solid $border-additional;
+    border-right: 1px solid $border-additional;
+  }
+}
