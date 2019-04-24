@@ -49,5 +49,9 @@
     width: 245px;
     margin-right: 40px;
     margin-left: 40px;
+
+    &:last-child {
+      border-bottom: none;
+    }
   }
 }
