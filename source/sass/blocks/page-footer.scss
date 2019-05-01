@@ -5,10 +5,8 @@
   background-color: $color-neutral;
 }
 
-.page-footer__address {
-  &--other-color {
-    background-color: $color-accent-contrast;
-  }
+.page-footer__map {
+  height: 100px;
 }
 
 .page-footer__contacts {
@@ -51,4 +49,20 @@
   padding-bottom: 22px;
 
   border-top: 1px solid #dadada;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__map {
+    height: 250px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer__address {
+    position: relative;
+  }
+
+  .page-footer__map {
+    height: 400px;
+  }
 }
