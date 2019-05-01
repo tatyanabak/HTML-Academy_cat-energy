@@ -129,18 +129,17 @@
 
     padding-bottom: 75px;
 
+    border-top: none;
     background: linear-gradient(to bottom, transparent 225px, $color-neutral 225px);
-
-    @include min-width-1400;
   }
 
   .example__wrapper {
     display: flex;
     flex-direction: column;
 
-    width: 35%;
+    width: 30%;
     margin-right: 0;
-    margin-left: 0;
+    margin-left: $desktop-indent;
     padding-bottom: 0;
   }
 
