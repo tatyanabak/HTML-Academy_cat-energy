@@ -10,8 +10,6 @@
 }
 
 .page-footer__contacts {
-  width: 100%;
-
   text-align: center;
 
   @include max-width-320;
@@ -55,6 +53,37 @@
   .page-footer__map {
     height: 250px;
   }
+
+  .page-footer__contacts {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 55px;
+    padding-bottom: 55px;
+
+    @include min-width-768;
+  }
+
+  .page-footer__link-logo {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .page-footer__social {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    border-top: none;
+  }
+
+  .page-footer__copyright {
+    width: 160px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    border-top: none;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -64,5 +93,9 @@
 
   .page-footer__map {
     height: 400px;
+  }
+
+  .page-footer__contacts {
+    @include min-width-1440;
   }
 }
