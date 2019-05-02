@@ -116,9 +116,9 @@
 
 @media (min-width: $desktop-width) {
   .basic-points {
-    padding-bottom: 25px;
+    padding-bottom: 0;
 
-    @include min-width-1400;
+    @include min-width-1440;
   }
 
   .basic-points__item {

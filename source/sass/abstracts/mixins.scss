@@ -51,7 +51,6 @@
 }
 
 @mixin max-width-320 {
-  //width: 280px; /* делаю вёрстку резиновой */
   width: 87.5%;
   margin-right: auto;
   margin-left: auto;
@@ -63,8 +62,14 @@
   margin-left: auto;
 }
 
-@mixin min-width-1400 {
-  width: 87.1%;
+@mixin form-min-width-768 {
+  width: 82%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin min-width-1440 {
+  width: 84.7%;
   margin-right: auto;
   margin-left: auto;
 }
@@ -90,7 +95,8 @@
 }
 
 @mixin form-input {
-  flex-grow: 1;
+  //flex-grow: 1;
+  width: 100%;
 
   box-sizing: border-box;
   min-width: 100px;

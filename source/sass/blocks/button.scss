@@ -19,28 +19,41 @@
   &--more-product {
     @include button-general($color-neutral, $color-text, $color-neutral-interacting);
   }
-
-  &--other-product {
-    width: 100%;
-  }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 768px) {
   .button {
     @include max-width-320;
+
+    &--other-product {
+      width: 100%;
+    }
   }
 }
 
 @media (min-width: $tablet-width) {
   .button {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+
+    font-size: 16px;
+    line-height: 1.25em;
+
     &--promo {
       display: inline-block;
 
+      width: 245px;
       margin-left: 15.6%;
       padding-top: 17px;
-      padding-right: 30px;
       padding-bottom: 15px;
-      padding-left: 30px;
+
+      font-size: 20px;
+      line-height: 1em;
+    }
+
+    &--form {
+      width: 45%;
 
       font-size: 20px;
       line-height: 1em;
@@ -52,6 +65,10 @@
   .button {
     &--promo {
       margin-left: 13.5%;
+    }
+
+    &--other-product {
+      width: 245px;
     }
   }
 }

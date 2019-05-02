@@ -42,7 +42,6 @@
 
     content: "";
 
-    outline: 1px solid red;
     background-repeat: no-repeat;
     background-position: center;
   }
@@ -180,7 +179,7 @@
     display: flex;
     justify-content: space-between;
 
-    @include min-width-1400;
+    @include min-width-1440;
   }
 
   .program__item {
