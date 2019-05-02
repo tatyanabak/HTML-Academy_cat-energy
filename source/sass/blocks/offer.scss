@@ -2,16 +2,12 @@
   position: relative;
 
   box-sizing: border-box;
-  height: 290px;
-  margin-bottom: 35px;
   padding-top: 190px;
   padding-bottom: 45px;
 
   background-color: $color-accent;
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-size: cover;
-
-  @include max-width-320;
 
   &::after {
     position: absolute;
@@ -39,4 +35,31 @@
   color: $color-accent-contrast;
 
   font-size: 16px;
+}
+
+@media (min-width: $tablet-width) and (max-width: 1439px) {
+  .offer {
+    padding-top: 75px;
+    padding-bottom: 70px;
+
+    &::after {
+      left: 12.7%;
+
+      width: 55px;
+      height: 60px;
+    }
+  }
+
+  .offer__text {
+    width: 160px;
+    margin-right: 17.6%;
+
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .offer__text {
+    width: 65.3%;
+  }
 }

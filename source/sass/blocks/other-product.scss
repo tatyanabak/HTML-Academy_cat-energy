@@ -40,24 +40,28 @@
 @media (min-width: $tablet-width) {
   .other-product {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+
+    box-sizing: border-box;
     padding-top: 0;
+    padding-right: 40px;
     padding-bottom: 30px;
     padding-left: 40px;
-    padding-right: 40px;
-    box-sizing: border-box;
   }
 
   .other-product__title {
     margin-top: 30px;
     margin-bottom: 25px;
+
     font-size: 20px;
   }
 
   .other-product__data {
     width: 36.5%;
+    max-width: 300px;
+
     font-size: 16px;
     line-height: 1.25em;
   }
@@ -68,5 +72,24 @@
 
   .other-product__data dd {
     width: 40%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .other-product {
+    align-items: baseline;
+
+    padding: 15px 0;
+  }
+
+  .other-product__title {
+    width: 285px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .other-product__data {
+    width: 285px;
+    padding-bottom: 0;
   }
 }
