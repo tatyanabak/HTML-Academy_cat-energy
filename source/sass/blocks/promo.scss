@@ -96,7 +96,7 @@
     width: 64%;
     max-width: 540px;
     margin-left: 15.6%;
-    padding-top: 50px;
+    padding-top: calc(50px + 85px);
     padding-bottom: 35px;
 
     text-align: left;
@@ -124,6 +124,7 @@
   .promo {
     width: 100%;
     margin-bottom: 80px;
+    padding-top: 110px;
     padding-bottom: 190px;
 
     &::before {
@@ -138,7 +139,7 @@
     }
 
     &::after {
-      top: 0;
+      top: 140px;
       left: 40%;
 
       width: 552px;
@@ -150,6 +151,7 @@
 
   .promo__title {
     width: 56.4%;
+    padding-top: 110px;
     margin-left: 13.5%;
   }
 

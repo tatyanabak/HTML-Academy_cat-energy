@@ -2,7 +2,9 @@
   border-bottom: 1px solid $border-basic;
 }
 
-.page-header__logo {
+.page-header__link-logo {
+  display: block;
+
   margin-left: $indent;
   padding-top: 10px;
   padding-bottom: 15px;
@@ -12,4 +14,39 @@
   cursor: pointer;
 
   @include main-logo-interaction;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    padding-top: 25px;
+
+    border-bottom: none;
+  }
+
+  .page-header__link-logo {
+    margin-left: $tablet-indent;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .page-header__logo {
+    width: 175px;
+    height: 60px;
+
+    outline: 1px solid orange;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    padding-top: 50px;
+  }
+
+  .page-header__link-logo {
+    margin-left: $desktop-indent;
+  }
 }
