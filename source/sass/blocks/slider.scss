@@ -67,8 +67,10 @@
 
 @media (min-width: $desktop-width) {
   .slider {
-    width: 45.1%;
-    margin-right: $desktop-indent;
+    //width: 45.1%;
+    width: 650px;
+    //margin-right: $desktop-indent;
+    //margin-right: 40px;
   }
 
   .slider__item {

@@ -18,17 +18,21 @@
 
 @media (min-width: $tablet-width) {
   .page-header {
-    position: absolute;
-    top: 0;
+    display: flex;
+    justify-content: space-between;
 
-    width: 100%;
-    padding-top: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 
     border-bottom: none;
+
+    @include min-width-768;
   }
 
   .page-header__link-logo {
-    margin-left: $tablet-indent;
+    display: flex;
+
+    margin-left: 0;
     padding-top: 0;
     padding-bottom: 0;
   }
@@ -36,17 +40,17 @@
   .page-header__logo {
     width: 175px;
     height: 60px;
-
-    outline: 1px solid orange;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header {
-    padding-top: 50px;
+    margin-top: 55px;
+
+    @include min-width-1300;
   }
 
-  .page-header__link-logo {
-    margin-left: $desktop-indent;
+  .page-header__logo {
+    width: 200px;
   }
 }

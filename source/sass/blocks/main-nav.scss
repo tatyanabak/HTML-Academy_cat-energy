@@ -72,14 +72,15 @@
 
 @media (min-width: $tablet-width) {
   .main-nav {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    right: 0;
+    //position: absolute;
+    //z-index: 1;
+    //top: 0;
+    //right: 0;
+    margin-top: 0;
 
     width: 440px;
-    margin-top: 0;
-    margin-right: $tablet-indent;
+    //margin-top: 0;
+    //margin-left: auto;
   }
 
   .main-nav__toggle {
@@ -89,15 +90,18 @@
   .main-nav__list {
     display: flex;
     justify-content: space-between;
+    //align-items: center;
 
-    margin-top: 43px;
-    margin-bottom: 10px;
+    //height: 100%;
+    margin-top: 20px;
   }
 
   .main-nav__item {
+    position: relative;
     border-top: none;
 
     &--active::after {
+      position: absolute;
       display: block;
 
       width: 100%;
@@ -123,12 +127,7 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
-    margin-right: 110px;
-  }
-
-  .main-nav__list {
     width: 480px;
-    margin-top: 70px;
   }
 
   .main-nav__item--other-color {

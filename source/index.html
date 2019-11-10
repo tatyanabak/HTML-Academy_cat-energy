@@ -29,9 +29,11 @@
     <main class="page-main">
       <h1 class="visually-hidden">Интернет-магазин функционального корма для котов Cat Energy</h1>
       <section class="promo">
-        <h2 class="promo__title">Функциональное питание для котов</h2>
-        <p class="promo__text">Занялся собой? Займись котом!</p>
-        <a class="button button--promo" href="form.html">Подобрать программу</a>
+        <div class="promo__wrapper">
+          <h2 class="promo__title">Функциональное питание для котов</h2>
+          <p class="promo__text">Занялся собой? Займись котом!</p>
+          <a class="button button--promo" href="form.html">Подобрать программу</a>
+        </div>
       </section>
       <section class="program">
         <h2 class="visually-hidden">Программы питания</h2>
@@ -56,33 +58,35 @@
         </ol>
       </section>
       <section class="example">
-        <div class="example__wrapper">
-          <h2 class="title">Живой пример</h2>
-          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-          <div class="example__data">
-            <dl>
-              <dt>5&nbsp;кг</dt>
-              <dd>снижение веса</dd>
-            </dl>
-            <dl>
-              <dt>60&nbsp;дней</dt>
-              <dd>затрачено времени</dd>
-            </dl>
-            <p class="example__cost">Затраты на питание:
-              <span>15&nbsp;000 руб.</span>
-            </p>
+        <div class="example__conteiner">
+          <div class="example__wrapper">
+            <h2 class="title">Живой пример</h2>
+            <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+            <div class="example__data">
+              <dl>
+                <dt>5&nbsp;кг</dt>
+                <dd>снижение веса</dd>
+              </dl>
+              <dl>
+                <dt>60&nbsp;дней</dt>
+                <dd>затрачено времени</dd>
+              </dl>
+              <p class="example__cost">Затраты на питание:
+                <span>15&nbsp;000 руб.</span>
+              </p>
+            </div>
           </div>
-        </div>
-        <div class="slider">
-          <ul class="slider__list">
-            <li class="slider__item slider__item--before slider__item--active"></li>
-            <li class="slider__item slider__item--after"></li>
-          </ul>
-          <div class="slider__controls">
-            <label class="slider__label" for="before">Было</label>
-            <input class="slider__control visually-hidden" type="radio" name="example" id="before" checked>
-            <label class="slider__label" for="after">Стало</label>
-            <input class="slider__control visually-hidden" type="radio" name="example" id="after">
+          <div class="slider">
+            <ul class="slider__list">
+              <li class="slider__item slider__item--before slider__item--active"></li>
+              <li class="slider__item slider__item--after"></li>
+            </ul>
+            <div class="slider__controls">
+              <label class="slider__label" for="before">Было</label>
+              <input class="slider__control visually-hidden" type="radio" name="example" id="before" checked>
+              <label class="slider__label" for="after">Стало</label>
+              <input class="slider__control visually-hidden" type="radio" name="example" id="after">
+            </div>
           </div>
         </div>
       </section>

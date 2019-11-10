@@ -52,14 +52,16 @@
 
 @mixin max-width-320 {
   width: 87.5%;
+  max-width: 450px;
   margin-right: auto;
   margin-left: auto;
 }
 
 @mixin min-width-768 {
-  width: 92.2%;
+  width: 92%;
   margin-right: auto;
   margin-left: auto;
+  max-width: 1000px;
 }
 
 @mixin form-min-width-768 {
@@ -68,8 +70,10 @@
   margin-left: auto;
 }
 
-@mixin min-width-1440 {
+@mixin min-width-1300 {
   width: 84.7%;
+  min-width: 1220px;
+  max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -95,7 +99,6 @@
 }
 
 @mixin form-input {
-  //flex-grow: 1;
   width: 100%;
 
   box-sizing: border-box;

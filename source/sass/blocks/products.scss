@@ -3,6 +3,7 @@
 }
 
 .products__item {
+  @include max-width-320;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -18,6 +19,9 @@
 
 @media (min-width: $tablet-width) {
   .products__list {
+
+    //@include min-width-768;
+
     display: flex;
     flex-wrap: wrap;
 
