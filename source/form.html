@@ -27,27 +27,28 @@
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="title title--with-indent">Подбор программы</h1>
+      <h1 class="page-main__title">Подбор программы</h1>
       <p class="page-main__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
-        <div class="form__wrapper form__wrapper--pet">
-          <fieldset class="form__fieldset form__fieldset--pet">
-            <legend class="visually-hidden">Описание питомца</legend>
-            <div class="form__item form__item--pet">
+        <div class="form__wrapper-row">
+          <fieldset class="form__fieldset form__wrapper-half-of-width">
+            <div class="form__item">
               <label class="form__label" for="pet-name">Имя:<sup>*</sup></label>
               <input class="form__text" type="text" name="pet-name" id="pet-name" placeholder="Барсик">
             </div>
-            <div class="form__item form__item--pet">
+            <div class="form__item">
               <label class="form__label" for="weight">Вес (кг):<sup>*</sup></label>
               <input class="form__text" type="text" name="weight" id="weight" placeholder="7">
             </div>
-            <div class="form__item form__item--pet">
+            <div class="form__item">
               <label class="form__label" for="age">Возраст (лет):</label>
               <input class="form__text" type="text" name="age" id="age" placeholder="7">
             </div>
           </fieldset>
-          <fieldset class="form__fieldset form__fieldset--program">
-            <div class="form__item form__item--radiobutton">
+          <fieldset class="form__fieldset form__wrapper-half-of-width form__wrapper-with-border">
+            <legend class="visually-hidden">Выбор программы</legend>
+            <div class="form__item
+             form__item--radiobutton">
               <input class="form__radiobutton visually-hidden" type="radio" name="program" id="slim" checked>
               <label class="form__radiobutton-label" for="slim">Похудение</label>
             </div>
@@ -63,12 +64,12 @@
         </div>
         <fieldset class="form__fieldset">
           <legend class="form__legend">Контактные данные (владельца кота)</legend>
-          <div class="form__wrapper form__wrapper--contacts">
-            <div class="form__item form__item--contacts">
+          <div class="form__wrapper-row">
+            <div class="form__item form__wrapper-half-of-width">
               <label class="form__label" for="email">E-mail:<sup>*</sup></label>
               <input class="form__text form__text--email" type="email" name="email" id="email" placeholder="kuklachev@gmail.com">
             </div>
-            <div class="form__item form__item--contacts">
+            <div class="form__item form__wrapper-half-of-width">
               <label class="form__label" for="phone">Телефон:<sup>*</sup></label>
               <input class="form__text form__text--tel" type="tel" name="phone" id="phone" placeholder="8 (960) 900-60-90">
             </div>
@@ -82,7 +83,7 @@
         </div>
         <fieldset class="form__fieldset">
           <legend class="form__legend">Дополнительно</legend>
-          <div class="form__wrapper form__wrapper--additional">
+            <div class="form__wrapper-row">
             <div class="form__item form__item--checkbox">
               <input class="form__checkbox visually-hidden" type="checkbox" name="false-sugar" id="false-sugar" checked>
               <label class="form__checkbox-label" for="false-sugar">Сахарозаменитель</label>
@@ -101,8 +102,8 @@
             </div>
           </div>
         </fieldset>
-        <div class="form__wrapper form__wrapper--button">
-          <button class="button button--form" type="submit">Отправить заявку</button>
+        <div class="form__wrapper-row">
+          <button class="form__button" type="submit">Отправить заявку</button>
           <p class="form__note"><sup>*</sup> — Обязательные поля</p>
         </div>
       </form>
