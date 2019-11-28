@@ -4,6 +4,22 @@
   padding-top: 85px;
   padding-bottom: 25px;
 
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    box-sizing: border-box;
+    width: 324px;
+
+    border: 1px solid $border-basic;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+  }
+
   &::after {
     position: absolute;
     top: 25px;
@@ -18,6 +34,15 @@
     background-image: url("../img/icon-plus-mobile.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-width: $tablet-width) {
+      top: 120px;
+
+      width: 60px;
+      height: 60px;
+
+      background-image: url("../img/icon-plus.svg");
+    }
   }
 }
 
@@ -36,6 +61,19 @@
   font-weight: 400;
 
   @include max-width-320;
+
+  @media (min-width: $tablet-width) {
+    width: 56%;
+    margin-bottom: 30px;
+    padding-bottom: 0;
+
+    font-size: 20px;
+    line-height: 1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 82%;
+  }
 }
 
 .more-products__text {
@@ -50,40 +88,8 @@
   font-style: 12px;
 
   @include max-width-320;
-}
 
-@media (min-width: $tablet-width) {
-  .more-products {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: flex-end;
-
-    box-sizing: border-box;
-    width: 324px;
-
-    border: 1px solid $border-basic;
-
-    &::after {
-      top: 120px;
-
-      width: 60px;
-      height: 60px;
-
-      background-image: url("../img/icon-plus.svg");
-    }
-  }
-
-  .more-products__title {
-    width: 56%;
-    margin-bottom: 30px;
-    padding-bottom: 0;
-
-    font-size: 20px;
-    line-height: 1em;
-  }
-
-  .more-products__text {
+  @media (min-width: $tablet-width) {
     width: 90%;
     margin-bottom: 85px;
     padding-bottom: 0;
@@ -91,18 +97,40 @@
     font-size: 16px;
     line-height: 1em;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 170px;
+  }
 }
 
-@media (min-width: $desktop-width) {
-  .more-products {
-    width: 245px;
+.more-products__button {
+  display: block;
+
+  box-sizing: border-box;
+  padding: 15px 10px;
+
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: $color-text;
+  border: none;
+  background-color: $color-neutral;
+
+  font-family: $font-accent;
+  font-size: 16px;
+
+  &:hover {
+    background-color: $color-neutral-interacting;
   }
 
-  .more-products__title {
-    width: 82%;
+  &:focus {
+    background-color: $color-neutral-interacting;
   }
 
-  .more-products__text {
-    width: 170px;
+  &:active {
+    color: rgba($color-text, 0.3);
+    background-color: $color-neutral-interacting;
   }
 }
