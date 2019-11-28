@@ -2,11 +2,13 @@ body {
   position: relative;
   min-width: 320px;
 
-  padding: 0;
-
   color: $color-basic;
 
   font-family: $font-basic;
   font-size: 14px;
   line-height: 1.285em;
+}
+
+* {
+  outline: 1px solid orange;
 }

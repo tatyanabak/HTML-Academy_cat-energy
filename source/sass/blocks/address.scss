@@ -7,6 +7,25 @@
 
   @include max-width-320;
 
+  @media (min-width: $tablet-width) {
+    width: 89.2%;
+    min-width: 625px;
+    padding-top: 70px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $desktop-width)  {
+    position: absolute;
+    top: 95px;
+    left: $desktop-indent;
+
+    width: 570px;
+    padding-right: 90px;
+    padding-left: 75px;
+
+    background-color: #ffffff;
+  }
+
   &--other-color {
     background-color: #ffffff;
   }
@@ -22,6 +41,12 @@
   font-family: $font-accent;
   font-size: 16px;
   line-height: 1.25em;
+
+  @media (min-width: $tablet-width) {
+    width: 155px;
+
+    font-size: 20px;
+  }
 }
 
 .address__wrapper {
@@ -32,40 +57,11 @@
   color: $color-text;
 
   line-height: 1.43;
-}
 
-@media (min-width: $tablet-width) {
-  .address {
-    width: 89.2%;
-    min-width: 625px;
-    padding-top: 70px;
-    padding-bottom: 60px;
-  }
-
-  .address__call {
-    width: 155px;
-
-    font-size: 20px;
-  }
-
-  .address__wrapper {
+  @media (min-width: $tablet-width) {
     width: 155px;
 
     font-size: 16px;
     line-height: 1.25em;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .address {
-    position: absolute;
-    top: 95px;
-    left: $desktop-indent;
-
-    width: 570px;
-    padding-right: 90px;
-    padding-left: 75px;
-
-    background-color: #ffffff;
   }
 }
