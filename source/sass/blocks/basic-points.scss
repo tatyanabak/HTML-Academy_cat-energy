@@ -4,21 +4,73 @@
   border-top: 1px solid transparent;
 
   @include max-width-320;
+
+  @media (min-width: $tablet-width) {
+    padding-bottom: 58px;
+
+    @include min-width-768;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 0;
+
+    @include min-width-1300;
+  }
 }
 
 .basic-points__list {
-  margin-top: -20px;
+  margin-bottom: -20px;
 
   @include hide-list;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-top: 65px;
+    margin-right: -58px;
+    margin-bottom: -90px;
+
+    counter-reset: number;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: -6.4%;
+  }
 }
 
 .basic-points__item {
   display: flex;
   align-items: center;
 
-  margin-top: 20px;
+  margin-bottom: 20px;
 
   color: $color-text;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    box-sizing: border-box;
+    width: 42.3%;
+    margin-right: 58px;
+    margin-bottom: 90px;
+    padding-right: 10.5%;
+    padding-bottom: 50px;
+
+    font-size: 16px;
+    line-height: 1.5em;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 18.8%;
+    min-width: 245px;
+    margin-right: 6.1%;
+    padding-right: 0;
+  }
 
   &::before {
     display: block;
@@ -33,6 +85,39 @@
     background-color: $color-accent;
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-width: $tablet-width) {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 35px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 32%;
+
+      display: block;
+
+      height: 100%;
+
+      content: counter(number);
+      counter-increment: number;
+
+      color: $color-neutral;
+
+      font-family: $font-accent;
+      font-size: 295px;
+      line-height: 0.71em;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: 0;
+      left: auto;
+    }
   }
 
   &--nutrition::before {
@@ -50,4 +135,8 @@
   &--result::before {
     background-image: url("../img/advantage-clock@1x.png");
   }
+}
+
+.basic-points__title {
+  @include title;
 }

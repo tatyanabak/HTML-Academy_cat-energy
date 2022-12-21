@@ -1,6 +1,4 @@
 .button {
-  display: block;
-
   box-sizing: border-box;
   padding-top: 15px;
   padding-right: 10px;
@@ -9,10 +7,12 @@
 
   font-size: 16px;
 
-  @include button-general($color-accent, $color-accent-contrast, $color-accent-interacting);
   @include max-width-320;
+  @include button-general($color-accent, $color-accent-contrast, $color-accent-interacting);
 
   &--promo {
+    width: 100%;
+    margin-top: auto;
     padding-top: 15px;
     padding-bottom: 10px;
 
@@ -22,8 +22,54 @@
   &--more-product {
     @include button-general($color-neutral, $color-text, $color-neutral-interacting);
   }
+}
 
-  &--other-product {
+@media (max-width: 768px) {
+  .button {
+    &--product {
+      width: 100%;
+    }
+
+    &--other-product {
+      width: 100%;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
     width: 100%;
+    max-width: 1000px;
+    margin-right: 0;
+    margin-left: 0;
+
+    font-size: 16px;
+    line-height: 1.25em;
+
+    &--promo {
+      display: inline-block;
+
+      width: 245px;
+      padding-top: 17px;
+      padding-bottom: 15px;
+
+      font-size: 20px;
+      line-height: 1em;
+    }
+
+    &--form {
+      width: 45%;
+
+      font-size: 20px;
+      line-height: 1em;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .button {
+    &--other-product {
+      width: 245px;
+    }
   }
 }

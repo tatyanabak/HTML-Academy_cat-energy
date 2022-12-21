@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
 
+  //width: 100%;
   margin-top: 30px;
   margin-bottom: 30px;
   margin-left: $indent;
@@ -12,7 +13,7 @@
   line-height: 1em;
 
   &::after {
-    display: inline-block;
+    display: block;
     flex-grow: 1;
 
     height: 3px;
@@ -22,5 +23,48 @@
     content: "";
 
     background-color: $color-accent;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .subtitle {
+    margin-top: 70px;
+    margin-bottom: 75px;
+    margin-left: 0;
+
+    font-size: 36px;
+
+    &::before {
+      display: block;
+
+      width: $tablet-indent;
+      height: 3px;
+      margin-top: 5px;
+      margin-right: 5.2%;
+
+      content: "";
+
+      background-color: $color-accent;
+    }
+
+    &::after {
+      margin-left: 5.2%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .subtitle {
+    width: 100%;
+    margin-top: 80px;
+
+    &::before {
+      width: 4.8%;
+      margin-right: 2.7%;
+    }
+
+    &::after {
+      margin-left: 2.7%;
+    }
   }
 }

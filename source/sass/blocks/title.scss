@@ -11,3 +11,33 @@
     margin-left: $indent;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .title {
+    margin-top: 50px;
+    margin-bottom: 60px;
+    //padding-top: 50px;
+
+    font-size: 60px;
+    line-height: 1em;
+
+    &--with-indent {
+      //@include min-width-768;
+      margin-left: $tablet-indent;
+      //padding-top: calc(50px + 85px);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .title {
+    margin-top: 80px;
+    margin-bottom: 50px;
+
+    &--with-indent {
+      margin-left: $desktop-indent;
+      //padding-top: calc(80px + 110px);
+      //@include min-width-1300;
+    }
+  }
+}

@@ -1,9 +1,26 @@
 .page-main__text {
-  width: 75%;
-  margin: 5px $indent;
+  width: 250px;
+  margin: 5px $mobile-indent;
 
   text-transform: uppercase;
 
   font-family: $font-accent;
   font-weight: 500;
+
+  @media (min-width: $tablet-width) {
+    width: 350px;
+    margin-left: calc(#{$tablet-indent} + 40px);
+
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-left: $desktop-indent;
+  }
+}
+
+.page-main__title {
+  @include title;
+  @include wrapper;
 }

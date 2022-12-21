@@ -1,5 +1,17 @@
 .products__list {
   @include hide-list;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-bottom: -60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .products__item {
@@ -7,9 +19,30 @@
   flex-wrap: wrap;
   justify-content: center;
 
+  box-sizing: border-box;
+  padding: 25px $mobile-indent;
+
   border-top: 1px solid $border-product;
 
   &:last-child {
     border-bottom: 1px solid $border-product;
+
+    @media (min-width: $desktop-width) {
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    width: 325px;
+    margin: 0 $tablet-indent 60px;
+    padding: 25px $tablet-indent 40px;
+
+    border-top: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 245px;
+    margin-right: $desktop-indent;
+    margin-left: $desktop-indent;
   }
 }

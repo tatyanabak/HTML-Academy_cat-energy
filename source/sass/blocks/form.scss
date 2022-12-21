@@ -1,54 +1,135 @@
 .form {
-  margin-top: 40px;
-  padding-bottom: 35px;
+  margin: 40px 0 35px;
+
+  @media (min-width: $tablet-width) {
+    margin: 70px 0;
+  }
+}
+
+.form__wrapper-row {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: calc(100% - 2 * #{$tablet-indent--form});
+    margin: 0 $tablet-indent--form;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: calc(100% - 2 * #{$desktop-indent});
+    margin: 0 $desktop-indent;
+  }
 }
 
 .form__fieldset {
-  margin-right: 0;
-  margin-left: 0;
+  margin: 0;
   padding: 0;
 
   border: none;
   border-top: 3px solid $color-accent;
+}
 
-  &--pet {
-    padding-bottom: 25px;
+.form__wrapper-half-of-width {
+  border-top: none;
 
-    border-top: none;
+  @media (min-width: $tablet-width) {
+    width: 100%;
   }
 
-  &--program {
-    padding-top: 20px;
-    padding-bottom: 20px;
+  @media (min-width: $desktop-width) {
+    width: 47%;
+  }
+}
 
-    border-top: 1px solid $border-basic;
-    border-bottom: 1px solid $border-basic;
+.form__wrapper-with-border {
+  box-sizing: border-box;
+  padding: 20px 0;
+
+  border-top: 1px solid $border-basic;
+  border-bottom: 1px solid $border-basic;
+
+  @media (min-width: $tablet-width) {
+    margin: 45px 0 10px;
+    padding: 25px 30px;
+
+    border-right: 1px solid $border-basic;
+    border-left: 1px solid $border-basic;
   }
 
-  &:last-of-type {
-    margin-bottom: 35px;
+  @media (min-width: $desktop-width) {
+    margin: 0;
   }
 }
 
 .form__legend {
   box-sizing: border-box;
   max-width: 72%;
-  padding: 30px 25px 30px $indent;
+  padding: 30px 25px 30px $mobile-indent;
 
   font-family: $font-accent;
   font-size: 24px;
   font-weight: 400;
   line-height: 1em;
+
+  @media (min-width: $tablet-width) {
+    max-width: 78%;
+    margin-left: $tablet-indent;
+    padding: 40px 5.2%;
+
+    font-size: 36px;
+    line-height: 1em;
+  }
+
+  @media (min-width: $desktop-width) { /* доработать */
+    margin-left: 0;
+    padding: 40px $desktop-indent;
+  }
 }
 
 .form__item {
   display: flex;
   align-items: center;
 
-  @include max-width-320;
+  margin-bottom: 15px;
 
-  &:not(:last-child) {
-    margin-bottom: 14px;
+  @media (max-width: $tablet-width) {
+    width: calc(100% - 2 * #{$mobile-indent});
+    margin-right: $mobile-indent;
+    margin-bottom: 20px;
+    margin-left: $mobile-indent;
+  }
+
+  &--radiobutton:last-child {
+    margin-bottom: 0;
+  }
+
+  &--textarea {
+    width: calc(100% - 2 * #{$mobile-indent});
+    margin-right: $mobile-indent;
+    margin-left: $mobile-indent;
+
+    @media (min-width: $tablet-width) {
+      width: calc(100% - 2 * #{$tablet-indent--form});
+      margin-right: $tablet-indent--form;
+      margin-left: $tablet-indent--form;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: calc(100% - 2 * #{$desktop-indent});
+      margin-right: $desktop-indent;
+      margin-left: $desktop-indent;
+    }
+  }
+
+  &--checkbox {
+    @media (min-width: $tablet-width) {
+      width: 45%;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: calc((100% - 8 * #{$desktop-indent})/4);
+    }
   }
 }
 
@@ -56,6 +137,11 @@
   margin-right: 15px;
 
   @include form-label;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1em;
+  }
 }
 
 .form__radiobutton-label {
@@ -66,6 +152,11 @@
 
   @include form-label;
 
+  @media (min-width: $tablet-width)  {
+    font-size: 20px;
+    line-height: 1em;
+  }
+
   &::before {
     display: block;
 
@@ -74,9 +165,15 @@
     margin-right: 15px;
 
     content: "";
+    cursor: pointer;
 
     border: 1px solid #cdcdcd;
     border-radius: 50%;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &:hover::before,
@@ -91,15 +188,25 @@
 
 .form__radiobutton:checked + .form__radiobutton-label::after {
   position: absolute;
-  left: 11px;
+  top: 10px;
+  left: 10px;
 
-  width: 9px;
-  height: 9px;
+  width: 12px;
+  height: 12px;
 
   content: "";
+  cursor: pointer;
 
   border-radius: 50%;
   background-color: $color-accent;
+
+  @media (min-width: $tablet-width)  {
+    top: 11px;
+    left: 11px;
+
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .form__checkbox-label {
@@ -110,6 +217,11 @@
 
   @include form-label;
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 1em;
+  }
+
   &::before {
     display: block;
 
@@ -118,8 +230,14 @@
     margin-right: 15px;
 
     content: "";
+    cursor: pointer;
 
     border: 1px solid $border-basic;
+
+    @media (min-width: $tablet-width) {
+      width: 40px;
+      height: 40px;
+    }
   }
 
   &:hover::before,
@@ -141,14 +259,31 @@
   height: 17px;
 
   content: "";
+  cursor: pointer;
 
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: center;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+  }
 }
 
 .form__text {
   @include form-input;
+
+   @media (min-width: $tablet-width) {
+     padding: 17px;
+   }
+
+  @media (min-width: $desktop-width) {
+    height: calc(1em + 34px);
+
+    font-size: 20px;
+    line-height: 1em;
+
+  }
 
   &--email {
     background-image: url("../img/icon-mail.svg");
@@ -165,8 +300,135 @@
   }
 }
 
+.form__comment {
+  width: 100%;
+}
+
+.form__comment-label {
+  display: flex;
+  align-items: center;
+
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: $mobile-indent;
+
+  font-family: $font-accent;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1em;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 70px;
+    padding-bottom: 50px;
+    padding-left: 0;
+
+    font-size: 36px;
+    line-height: 1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  &::before {
+    @media (min-width: $tablet-width) {
+      display: block;
+
+      width: 3.9%;
+      height: 3px;
+      margin-right: 5.2%;
+
+      content: "";
+
+      background-color: $color-accent;
+    }
+
+    @media (min-width: $desktop-width) {  /* доработать */
+      width: 0;
+      margin-right: $desktop-indent;
+    /*
+      width: 4.8%;
+      margin-right: 2.7%;
+    */
+    }
+  }
+
+  &::after {
+    display: block;
+    flex-grow: 1;
+
+    width: 100px;
+    height: 3px;
+    margin-left: 25px;
+
+    content: "";
+
+    background-color: $color-accent;
+
+    @media (min-width: $tablet-width) {
+      margin-left: 5.2%;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin-left: 2.7%;
+    }
+  }
+}
+
 .form__textarea {
   @include form-input;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 0;
+    padding: 17px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+}
+
+.form__button {
+  display: block;
+
+  width: calc(100% - 2 * #{$mobile-indent});
+  margin: 0 $mobile-indent;
+  padding: 15px 10px;
+
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: $color-accent-contrast;
+  border: none;
+  background-color: $color-accent;
+
+  font-family: $font-accent;
+  font-size: 16px;
+
+  @media (min-width: $tablet-width) {
+    width: 45%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 47%;
+  }
+
+  &:hover {
+    background-color: $color-accent-interacting;
+  }
+
+  &:focus {
+    background-color: $color-accent-interacting;
+  }
+
+  &:active {
+    color: rgba($color-accent, 0.3);
+    background-color: $color-accent-interacting;
+  }
 }
 
 .form__note {
@@ -178,4 +440,20 @@
   color: $color-text;
 
   line-height: 1.143em;
+
+  @media (min-width: $tablet-width) {
+    align-self: center;
+
+    width: 45%;
+    margin-top: 0;
+
+    text-align: left;
+
+    font-size: 16px;
+    line-height: 1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 47%;
+    }
 }

@@ -2,46 +2,95 @@
   margin-top: -65px;
 
   text-align: right;
+
+  @media (min-width: $tablet-width) {
+    width: 440px;
+    margin-top: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    z-index: 1;
+
+    width: 480px;
+  }
 }
 
 .main-nav__toggle {
   width: 20px;
   height: 40px;
   margin-top: 10px;
-  margin-right: $indent;
+  margin-right: $mobile-indent;
   margin-bottom: 15px;
 
   cursor: pointer;
 
   border: none;
   background-color: inherit;
-  background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 25px 19px;
+  background-position: 0 8px;
 
   font-size: 0;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  background-image: url("../img/icon-close.svg");
+  background-size: 20px 20px;
+}
+
+.main-nav--closed .main-nav__toggle {
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-size: 25px 20px;
+}
+
+.main-nav--closed .main-nav__list {
+  display: none;
 }
 
 .main-nav__list {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 0;
+  @include hide-list;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 20px;
+  }
 }
 
 .main-nav__item {
-  list-style: none;
-
   text-align: center;
 
   border-top: 1px solid $border-basic;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+
+    border-top: none;
+
+    &--active::after {
+      position: absolute;
+
+      display: block;
+
+      width: 100%;
+      height: 2px;
+      margin-top: 5px;
+
+      content: "";
+
+      background-color: $color-accent;
+    }
+  }
 }
 
 .main-nav__link {
   display: block;
 
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding: 24px $mobile-indent;
 
   text-decoration: none;
   text-transform: uppercase;
@@ -51,9 +100,40 @@
   font-weight: 500;
   line-height: 1em;
 
-  @include max-width-320;
+  @media (min-width: $tablet-width) {
+    padding: 0;
+
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4em;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 1.25em;
+  }
 }
 
 .main-nav__link[href] {
   @include link-interaction($color-basic);
+}
+
+.main-nav__item--other-color {
+  &::after {
+    @media (min-width: $desktop-width) {
+      background-color: $color-accent-contrast;
+    }
+  }
+}
+
+.main-nav__item--other-color .main-nav__link {
+  @media (min-width: $desktop-width) {
+    color: $color-accent-contrast;
+  }
+}
+
+.main-nav__item--other-color .main-nav__link[href] {
+  @media (min-width: $desktop-width) {
+    @include link-interaction($color-accent-contrast);
+  }
 }

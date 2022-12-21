@@ -2,8 +2,6 @@
   position: relative;
 
   box-sizing: border-box;
-  height: 290px;
-  margin-bottom: 35px;
   padding-top: 190px;
   padding-bottom: 45px;
 
@@ -11,7 +9,10 @@
   background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-size: cover;
 
-  @include max-width-320;
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    padding-top: 75px;
+    padding-bottom: 70px;
+  }
 
   &::after {
     position: absolute;
@@ -27,11 +28,19 @@
     background-image: url("../img/icon-gift.svg");
     background-repeat: no-repeat;
     background-position: center;
+
+    @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+      left: 12.7%;
+
+      width: 55px;
+      height: 60px;
+    }
   }
 }
 
 .offer__text {
   width: 58%;
+  max-width: 170px;
   margin: 0 auto;
 
   text-align: center;
@@ -39,4 +48,14 @@
   color: $color-accent-contrast;
 
   font-size: 16px;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    margin-right: 17.6%;
+
+    text-align: left;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 65.3%;
+  }
 }

@@ -1,4 +1,4 @@
-@mixin button-general($bgc-bacis, $color-basic, $bgc-interacting) {
+@mixin button-general($bgc-bacis, $color-basic, $bgc-interacting) { /* удалить */
   display: block;
 
   cursor: pointer;
@@ -50,9 +50,67 @@
   }
 }
 
-@mixin max-width-320 {
-  //width: 280px; /* делаю вёрстку резиновой */
+@mixin title {
+  margin-top: 20px;
+  margin-bottom: 25px;
+
+  font-family: $font-accent;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.66em;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 50px;
+    margin-bottom: 60px;
+
+    font-size: 60px;
+    line-height: 1em;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
+}
+
+@mixin wrapper {
+  width: calc(100% - 2 * #{$mobile-indent});
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: $tablet-width) {
+    width: calc(100% - 2 * #{$tablet-indent});
+  }
+
+  @media (min-width: $desktop-width) {
+    width: calc(100% - 2 * #{$desktop-indent});
+  }
+}
+
+@mixin max-width-320 { /* удалить */
   width: 87.5%;
+  max-width: 450px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin min-width-768 { /* удалить */
+  width: 92%;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin form-min-width-768 { /* удалить */
+  width: 82%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@mixin min-width-1300 { /* удалить */
+  width: 84.7%;
+  min-width: 1220px;
+  max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -78,9 +136,8 @@
 }
 
 @mixin form-input {
-  flex-grow: 1;
-
   box-sizing: border-box;
+  width: 100%;
   min-width: 100px;
   padding: 15px;
 
